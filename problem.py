@@ -1227,10 +1227,68 @@
 #     return 'unknown value'
 
 #=+=================================  93  =========================================+=
+
+# import numpy as np
+# def find_next_square(sq):
+#     return (np.sqrt(sq)+1)**2 if np.sqrt(sq).is_integer() else  -1
+
+# print(find_next_square(121))#144
+# print(find_next_square(625))#676
+# print(find_next_square(114))#-1   
+## the same solution 
+# def find_next_square(sq):
+#     x = sq**0.5    
+#     return -1 if x % 1 else (x+1)**2
+    
 #=+=================================  94  =========================================+=
+# import math
+# def square_area(a):
+#     return (2 * a  / math.pi) **2
+# # 2a/pi **2
 #=+=================================  95  =========================================+=
+# def greet(name, owner):
+#     if name == owner:
+#         return 'Hello boss'
+#     return 'Hello guest'
+#=+=================================  94  =========================================+=
+# def remove(s):
+#     return s[:-1] if s.endswith('!') else s
+# def remove(s):
+    # return s.removesuffix('!')
+#=+=================================  95  =========================================+=
+# def data_reverse(data):
+#     groups = [
+#         data[i:i+8]
+#         for i in range(0, len(data), 8)
+#     ]
+#     return sum(groups[::-1],[])
+# print(data_reverse([1,1,1,1,0,0,0,0,  0,0,0,0,1,1,1,1]))#,[0,0,0,0,1,1,1,1,  1,1,1,1,0,0,0,0])
+# print(data_reverse([1,1,1,1,0,0,0,0]))#,[1,1,1,1,0,0,0,0])
 #=+=================================  96  =========================================+=
+# def queue_time(customers, n):
+#     tills = [0] * n
+
+#     for customer in customers:
+#         i = tills.index(min(tills))
+#         tills[i] += customer
+
+#     return max(tills)
+# print(queue_time([5,3,4], 1))#12
+# print(queue_time([10,2,3,3], 2))#10
+# print(queue_time([2,3,10], 2))#12
+
 #=+=================================  97  =========================================+=
+# def delete_nth(order,max_e):
+#     result = []
+#     for i in order:
+#         result.append(i)
+#         if result.count(i) > max_e :            
+#             result.pop()
+            
+#     return result 
+            
+# print(delete_nth([1,2,3,1,2,1,2,3], 2))#[1, 2, 3, 1, 2, 3])
+# print(delete_nth([20,37,20,21], 1))#[20, 37, 21])
 #=+=================================  98  =========================================+=
 #=+=================================  99  =========================================+=
 #=+=================================  100 =========================================+=
@@ -1276,3 +1334,22 @@
 #  set -> to give a unique value
 # print(s.replace(" ", "_"))
 # for i in enumerate(s):
+
+
+
+# The new function i find :
+
+# 1 - endswith  -> 
+#  i use  to cheach for the  last item in the string
+# if s.endswith('!') if the last item is ! it return True
+    
+# 2 - removesuffix
+# i use in to reomve a spesrfc last item
+#  s.removesuffix('!') if the last item == ! it reomve it if not pass
+
+
+# 3 - sum(data,[])
+# it merge the list of list to one list
+
+# 4 - list.pop()
+# it remove the last item in the list 
